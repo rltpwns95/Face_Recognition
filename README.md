@@ -1,17 +1,11 @@
 # Face_Recognition
 
-
-## -*- coding: utf-8 -*-  # 한글 주석쓸려면 적기
- 
 import cv2
- 
 font = cv2.FONT_ITALIC
- 
 def faceDetect():
     eye_detect = False
     face_cascade = cv2.CascadeClassifier("./haarcascade_frontalface_default.xml")  # 얼굴찾기 haar 파일
     eye_cascade = cv2.CascadeClassifier("./haarcascade_eye.xml") # 눈찾기 haar 파일
- 
     try:
         cam = cv2.VideoCapture(0)
     except:
